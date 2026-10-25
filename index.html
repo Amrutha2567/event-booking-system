@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shipshape — Release Checklist</title><link rel="stylesheet" href="/styles.css"></head>
+<body><header><div class="brand">✓ <span>shipshape<small>RELEASE WORKSPACE</small></span></div><span>All changes saved</span></header>
+<main><section class="hero"><div><p class="eyebrow">SHIP WITH CONFIDENCE</p><h1>Release checklist</h1><p>Everything in place for a smooth release.</p></div><button id="new-release">＋ New release</button></section>
+<section class="stats"><article><small>Total releases</small><strong id="total">0</strong></article><article><small>In progress</small><strong id="ongoing">0</strong></article><article><small>Completed</small><strong id="done">0</strong></article></section>
+<section class="list-head"><div><h2>Your releases</h2><p>Track every step from planning to production.</p></div><input id="search" placeholder="Search releases…" aria-label="Search releases"></section>
+<div id="release-list"><p class="muted">Loading releases…</p></div></main>
+<dialog id="create-dialog"><form id="create-form"><h2>Plan a release</h2><label>Release name *<input name="name" required maxlength="120" placeholder="e.g. v2.4.0"></label><label>Target date & time *<input name="date" type="datetime-local" required></label><label>Additional information<textarea name="info" rows="3" maxlength="4000"></textarea></label><div class="actions"><button type="button" id="cancel">Cancel</button><button type="submit">Create release</button></div><p id="error"></p></form></dialog><div id="toast" role="status"></div><script src="/app.js" defer></script></body></html>
