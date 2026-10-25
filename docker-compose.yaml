@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: releases
+      POSTGRES_USER: releases
+      POSTGRES_PASSWORD: releases
+    ports:
+      - "5432:5432"
+    volumes:
+      - release-data:/var/lib/postgresql/data
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgres://releases:releases@db:5432/releases
+      PORT: 4000
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+volumes:
+  release-data:
